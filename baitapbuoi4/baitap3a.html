@@ -3,65 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
-    <table width="50%">
-        <tr>
-            <td>Username:</td>
-            <td>
-                <input required type="text">
-            </td>
-        </tr>
-        <tr>
-            <td>Password:</td>
-            <td>
-                <input id="password" name="password" type="password">
-            </td>
-        </tr>
-        <tr>
-            <td>City of Employment:</td>
-            <td>
-                <input type="text">
-            </td>
-        </tr>
-        <tr>
-            <td>Web server:</td>
-            <td>
-                <select name="" id="">
-                    <option value="server">---Choose a server---</option>
-                    <option value="server">Server 1</option>
-                    <option value="server">Server 2</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Please specify your role:</td>
-            <td>
-                <input type="radio" name="role" id="admin">Admin 
+    <form 
+        action="https://api-gateway.fullstack.edu.vn/action_page.php"
+        method="post">
+        <table cellspacing="5">
+            <tr>
+                <td>
+                    <label for="username">Username:</label>
+                </td>
+                <td>
+                    <input type="username" name="username" id="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password:</label>
+                </td>
+                <td>
+                    <input type="password" name="password" id="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="city">City of <br> Employment:</label>
+                </td>
+                <td>
+                    <input type="city" name="city" id="city">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="server">Web server</label>
+                </td>
+                <td>
+                    <select name="server" id="server">
+                        <option value="choose">--Choose a server--</option>
+                        <option value="server1">Server 1</option>
+                        <option value="server2">Server 2</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="role">Please specify <br>your role</label>
+                </td>
+                <td>
+                    <input type="radio" name="role" id="admin" value="admin">
+                    <label for="admin">Admin</label>
                 <br>
-                <input type="radio" name="role" id="engineer">Engineer
+                    <input type="radio" name="role" id="engineer" value="engineer">
+                    <label for="engineer">Engineer</label>
                 <br>
-                <input type="radio" name="role" id="manager">Manager
+                    <input type="radio" name="role" id="manager" value="manager">
+                    <label for="manager">Manager</label>
                 <br>
-                <input type="radio" name="role" id="guest">Guest
-            </td>
-        </tr>
-        <br>
-        <tr>
-            <td>Single Si gn-on to the following</td>
-            <td>
-                <input type="checkbox" name="sign" id="mail">Mail
+                    <input type="radio" name="role" id="guest" value="guest">
+                    <label for="guest">Guest</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Single Sign-on <br> to the following</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="sign" id="mail" value="mail">
+                    <label for="mail">Mail</label>
                 <br>
-                <input type="checkbox" name="sign" id="payroll">Payroll
+                    <input type="checkbox" name="sign" id="payroll" value="payroll">
+                    <label for="payroll">Payroll</label>
                 <br>
-                <input type="checkbox" name="sign" id="self-service">Self-service
-            </td>
-            
-        </tr>
-    </table>
-    <br>
-    <button>Login</button>
-    <button>Reset</button>
+                    <input type="checkbox" name="sign" id="self-service" value="self-service">
+                    <label for="self-service">Self-service</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Login</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
 </body>
 </html>
