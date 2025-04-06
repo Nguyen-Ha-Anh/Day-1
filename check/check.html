@@ -1,111 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Accordion</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blurred Background</title>
   <style>
-    body {
-      background: #1e1e1e;
-      font-family: sans-serif;
-      padding: 40px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .accordion {
-      background: white;
-      border-radius: 5px;
-      max-width: 700px;
-      margin: auto;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    body, html {
+      height: 100%;
     }
 
-    .item {
-      border-bottom: 1px solid #ccc;
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url('https://i.ytimg.com/vi/x0fSBAgBrOQ/maxresdefault.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .item input {
-      display: none;
+    .box {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.4);
+      padding: 20px 40px;
+      border-radius: 10px;
+      box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px); /* làm mờ nền */
+      text-align: center;
+      color: black;
     }
 
-    .title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #cc4a1f;
-      color: white;
-      padding: 15px 20px;
+    .box h1 {
+      font-size: 22px;
       font-weight: bold;
-      cursor: pointer;
+      margin-bottom: 6px;
     }
 
-    .icon::before {
-      content: "+";
-      font-size: 18px;
+    .box p {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
     }
 
-    .item input:checked + .title .icon::before {
-      content: "−";
-    }
-
-    .content {
-      background: white;
-      max-height: 0;
-      overflow: hidden;
-      padding: 0 20px;
-      transition: all 0.3s ease;
-      color: #333;
-    }
-
-    .item input:checked ~ .content {
-      max-height: 400px;
-      padding: 15px 20px;
+    .box a {
+      color: black;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
-  <div class="accordion">
-
-    <div class="item">
-      <input type="checkbox" id="faq1">
-      <label class="title" for="faq1">
-        <span>How to set random colors?</span>
-        <span class="icon"></span>
-      </label>
-      <div class="content">
-        <p>To set random colors:</p>
-        <ol>
-          <li>Add <strong>jag-faq-random-colors</strong> class.</li>
-          <li>Open theme(num).css, find "jag-faq-random-colors".</li>
-          <li>You can change color from here.</li>
-        </ol>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-      </div>
+  <div class="container">
+    <div class="box">
+      <h1>Blurred Background</h1>
+      <p>By <a href="#!">F8 Fullstack</a></p>
     </div>
-
-    <div class="item">
-      <input type="checkbox" id="faq2">
-      <label class="title" for="faq2">
-        <span>How to use theme colors and add new theme color?</span>
-        <span class="icon"></span>
-      </label>
-      <div class="content">
-        <p>You can add new theme color by modifying the CSS file...</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <input type="checkbox" id="faq3">
-      <label class="title" for="faq3">
-        <span>How to change icon?</span>
-        <span class="icon"></span>
-      </label>
-      <div class="content">
-        <p>Use CSS ::before to swap "+" and "−" based on checked status...</p>
-      </div>
-    </div>
-
   </div>
-
 </body>
 </html>

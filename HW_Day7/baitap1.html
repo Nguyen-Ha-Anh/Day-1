@@ -13,6 +13,10 @@
         box-sizing: border-box;
     }
 
+    body {
+        height: 100%;
+    }
+
     img {
         width: 100%;
     }
@@ -22,35 +26,35 @@
         background-position: center;
         height: 100%;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         font-family: Arial, Helvetica, sans-serif;
     }
 
     .box {
-        position: absolute;
-        justify-items: center;
-        align-items: center;
-        background: rgba(255, 255, 255, 0.457);
-        padding: 10px 20px;
-        bottom: 153px;
-        width: 200px;
-        height: 130px;
-        right: 160px;
-        border-radius: 3px;
-        color: black;
-        text-align: center;
-        box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      padding: 20px 120px;
+      height: 220px;
+      top: 230px;
+      left: 580px;
+      border-radius: 3px;
+      box-shadow: 10px 8px 20px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      color: black;
+      text-align: center;
+    }
+    
+    .box h1 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 6px;
     }
 
-    h1 {
-        font-size: smaller;
-        font-weight: bold;
-    }
-    .box h1 {
-        margin-bottom: 6px;
-        font-weight: bold;
+    .box p {
+      font-size: 13px;
+      font-weight: bold;
+      margin: 0;
     }
 
     a {
@@ -58,15 +62,14 @@
     }
 
     p {
-        padding-top: 5px;
-        font-size: 8px;
+        font-size: 18px;
         font-weight: bold;
     }
 
 </style>
 <body>
-    <img src="https://i.ytimg.com/vi/x0fSBAgBrOQ/maxresdefault.jpg" alt="ReactJS">
     <div class="container">
+    <img src="https://i.ytimg.com/vi/x0fSBAgBrOQ/maxresdefault.jpg" alt="ReactJS">
         <div class="box">
             <h1>Blurred Background</h1>
             <p>By <a href="#!">F8 Fullstack</a></p>
