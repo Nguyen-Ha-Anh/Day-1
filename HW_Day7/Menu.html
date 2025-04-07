@@ -14,7 +14,7 @@
 
     body {
         font-family: Arial, Helvetica, sans-serif;
-        margin: 30px;
+        margin: 10px;
     }
 
     img {
@@ -39,10 +39,8 @@
 
     .web {
         position: relative;
-        padding: 10px;
-        border-radius: 10px;
+        padding: 5px;
         display: flex;
-        box-shadow: 0 0 3px;
         justify-content: space-between;
     }
 
@@ -52,7 +50,6 @@
         padding: 0;
         display: flex;
         justify-content: space-between;
-        text-decoration: underline;
         align-items: center;
         font-weight: bold;
     }
@@ -67,7 +64,7 @@
 
     .menu > li > a {
         color: #333;
-       padding: 10px;
+        padding: 10px;
         display: inline-block;
         text-decoration: none;
     }
@@ -81,9 +78,10 @@
         position: absolute;
         top: 100%;
         left: 0;
-        border-radius: 10px;
+        border-radius: 8px;
         list-style: none;
-        box-shadow: 0 2px 8px;
+        background-color: aliceblue;
+        width: 100px;
     }
 
     .menu li:hover .dropdown {
@@ -94,6 +92,8 @@
         display: block;
         padding: 8px ;
         color: black;
+        border-bottom: 1px solid #898989;
+        border-radius: 3px;
     }
 
     .join {
@@ -109,6 +109,7 @@
     .dropdown a {
         text-decoration: none;
     }
+
 </style>
 <body>
     <div class="web">
@@ -118,6 +119,7 @@
         <ul class="menu">
             <li>
                 <a href="#!" class="tool">Home</a> 
+                <span class="icon"></span>
                 <ul class="dropdown">
                     <li><a href="#!">Option 1</a></li>
                     <li><a href="#!">Option 2</a></li>
@@ -127,6 +129,7 @@
 
             <li>
                 <a href="#!" class="tool">Courses</a>
+                <span class="icon"></span>
                 <ul class="dropdown">
                     <li><a href="#!">Option 1</a></li>
                     <li><a href="#!">Option 2</a></li>
@@ -136,6 +139,7 @@
 
             <li>
                 <a href="#!" class="tool">Dashboard</a>
+                <span class="icon"></span>
                 <ul class="dropdown">
                     <li><a href="#!">Option 1</a></li>
                     <li><a href="#!">Option 2</a></li>
@@ -145,6 +149,7 @@
 
             <li>
                 <a href="#!" class="tool">Pages</a>
+                <span class="icon"></span>
                 <ul class="dropdown">
                     <li><a href="#!">Option 1</a></li>
                     <li><a href="#!">Option 2</a></li>
@@ -154,6 +159,7 @@
 
             <li>
                 <a href="#!" class="tool">Elements</a>
+                <span class="icon"></span>
                 <ul class="dropdown">
                     <li><a href="#!">Option 1</a></li>
                     <li><a href="#!">Option 2</a></li>
@@ -163,6 +169,7 @@
             
             <li>
                 <a href="#!" class="tool">Blog</a>
+                <span class="icon"></span>
                 <ul class="dropdown">
                     <li><a href="#!">Option 1</a></li>
                     <li><a href="#!">Option 2</a></li>
