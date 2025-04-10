@@ -59,35 +59,35 @@
         display: flex;
         flex-wrap: wrap;
         height: 200px;
-        border-radius: 10px;
-        justify-content: space-evenly;
         margin-top: 20px;
+        height: auto;
+        justify-content: space-between;
     }
 
     .district {
         position: relative;
         border-radius: 12px;
-        width: 300px;
+        width: calc(33.33% - 24px);
         background-color: #ccc;
         display: flex;
         margin: 12px;
+        
     }
 
     .district img {
         display: block;
         width: 100%;
-        height: 200px;
+        height: 300px;
         border-radius: 3px;
     }
 
     .district-text {
         position: absolute;
-        bottom: 10px;
-        left: 15px;
-        top: 12px;
         color: white;
         display: flex;
         width: 100%;
+        height: 110%;
+        padding: 12px;
     }
 
     .district-name {
@@ -100,13 +100,20 @@
         color: white;
         max-width: 150px;
         display: flex;
+        border: 1px solid rgba(255, 255, 255, 0.051);
+        background-color: rgba(0 0 0 0.5);
+        
     }
 
     .district-count {
         position: absolute;
         font-size: 14px;
-        bottom: 12px;
+        bottom: 50px;
         left: 16px;
+    }
+
+    .district-name, .district-count {
+        z-index: 1;
     }
 
 </style>
@@ -203,9 +210,9 @@
 
                 <div class="district">
                     <img src="https://www.lanha.vn/wp-content/uploads/2023/08/thiet-ke-noi-that-penthouse-1.jpeg.webp" alt="Huyện Bình Chánh">
-                    <div class="district-text"></div>
+                    <div class="district-text">
                         <h3 class="district-name">Huyện Bình Chánh</h3>
-                        <p class="district-count" style="color: white;">3.235 bất động sản đang bán</p>
+                        <p class="district-count">3.235 bất động sản đang bán</p>
                     </div>
                 </div>
             </div>

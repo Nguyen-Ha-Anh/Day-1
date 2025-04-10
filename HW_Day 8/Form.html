@@ -36,6 +36,18 @@
         font-family: "Lato", sans-serif;
     }
 
+    input {
+        font-family: "Lato", sans-serif;
+    }
+
+    select {
+        font-family: "Lato", sans-serif;
+    }
+
+    textarea {
+        font-family: "Lato", sans-serif;
+    }
+
     .title {
         padding: 20px;
     }
@@ -68,11 +80,21 @@
         font-size: 18px;
     }
 
-    .container:hover{
+    .container:focus-within{
         background-color: white;
         border: 2px solid gray;
-        box-shadow: 0 0 1px;
+        box-shadow: 0 0 1px gray;
     }
+
+    .container:focus .tool,
+    .container:focus .tooltip {
+        display: block;
+    }
+
+    .tool, .tooltip {
+        display: none;
+    }
+    
     textarea {
         display: flex;
         position: relative;
@@ -103,10 +125,12 @@
         font-size: 12px;
         width: 100px;
         margin-left: 160px;
+        
     }
 
-    .message {
+    #message {
         border-radius: 1px solid rgba(176, 176, 176, 0.597);
+        resize: none;
     }
 
     .text {
@@ -126,6 +150,7 @@
     }
     input[name='name'] > li {
         display: inline-block;
+        
     }
 
     select {
@@ -161,6 +186,54 @@
 
     .required {
         color: rgba(82, 82, 82, 0.569);
+        font-size: 8px;
+        position: absolute;
+        top: 40%;
+        right: 20px;
+        display: inline;
+    }
+
+    .required1 {
+        color: rgba(82, 82, 82, 0.569);
+        font-size: 8px;
+        position: absolute;
+        top: 10%;
+        right: 20px;
+        display: inline;
+    }
+
+    .required-alt {
+        color: black;
+        font-size: 15px;
+        position: absolute;
+        top: 35%;
+        right: 20px;
+        display: none;
+    }
+
+    .required-alt1 {
+        color: black;
+        font-size: 15px;
+        position: absolute;
+        top: 10%;
+        right: 20px;
+        display: none;
+    }
+
+    .container:focus-within .required {
+        display: none;
+    }
+
+    .container:focus-within .required-alt {
+        display: inline;
+    }
+
+    .container:focus-within .required1 {
+        display: none;
+    }
+
+    .container:focus-within .required-alt1 {
+        display: inline;
     }
 
     .tool {
@@ -173,10 +246,9 @@
         /* bottom: 60px; */
         top: -60px;
         left: 30px;
-        display: none;
     }
 
-    .container:hover .tool {
+    .container:focus-within .tool {
         display: block;
     }
 
@@ -187,12 +259,17 @@
         position: absolute;
         left: 50px;
         top: -22px;
-        display: none;
     }
 
-    .container:hover .tooltip {
+    .container:focus-within .tooltip {
         display: block;
     }
+
+    .checkbox:hover button {
+        cursor: pointer;
+    }
+
+     
 </style>
 <body>
     <div>
@@ -207,11 +284,12 @@
                 <label for="name" class="dropdown">Enter your name</label>
                 <input required type="text" name="name" placeholder="Your name">
                 <span class="tool">Enter your name</span>
-                <span class="required">*</span>
+                <span class="required">★</span>
                 <span class="tooltip"></span>
                 <ul class="name">
                     <li>Enter your name</li>
                 </ul>
+                <span class="required-alt">⤫</span>
             </div>
 
             <div class="container">
@@ -220,7 +298,8 @@
                 <input required type="email" name="email" placeholder="your@domain.com">
                 <span class="tool">Enter your email</span>
                 <span class="tooltip"></span>
-                <span class="required">*</span>
+                <span class="required">★</span>
+                <span class="required-alt">⤫</span>
             </div>
 
             <div class="container">
@@ -229,6 +308,7 @@
                 <input type="number" name="phone" placeholder="+44 00 123">
                 <span class="tool">Enter your phone number</span>
                 <span class="tooltip"></span>
+                
             </div>
 
             <div class="container">
@@ -245,7 +325,8 @@
                 <textarea required name="message" id="message" placeholder="Message"></textarea>
                 <span class="tool">Enter your message</span>
                 <span class="tooltip"></span>
-                <span class="required">*</span>
+                <span class="required1">★</span>
+                <span class="required-alt1">⤫</span>
             </div>
 
             <div class="checkbox">
