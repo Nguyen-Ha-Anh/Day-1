@@ -78,3 +78,7 @@ body {
 .flex-basic-50-percent {
     flex-basis: 50%;
 }
+
+.red-color {
+    color: red;
+}
