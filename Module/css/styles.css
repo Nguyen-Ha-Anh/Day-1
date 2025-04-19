@@ -90,9 +90,8 @@
   
  
   .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    align-items: flex-start;
     font-size: 1.6rem;
     font-weight: 600;
     padding: 10px 20px;
@@ -100,10 +99,47 @@
     cursor: pointer;
     transition: 0.3s;
   }
+
+  .nft__img img {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+  }
+
+  .btn--secondary--header {
+    display: flex;
+    height: 60px;
+    padding: 0px 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 20px;
+    background: var(--Call-to-Action, #A259FF);
+  }
   
   .btn--secondary {
-    background-color: #A259FF;
+    border: 2px solid #A259FF;
+    border-radius: 20px;
     color: #ffffff;
+    width: 187px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .btn--secondary span {
+    color: #FFF;
+    text-align: center;
+    font-family: "Work Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
   }
   
  
@@ -496,6 +532,13 @@
     background-color: #3B3B3B;
     border-radius: 16px;
     padding: 20px;
+  }
+
+  .nft__img {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
   }
   
   .nft__info {
