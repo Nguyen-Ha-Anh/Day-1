@@ -14,6 +14,22 @@
         display: block;
         border: none;
     }
+
+    .top-creators {
+        margin-top: 40px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+
+    }
+
+    .top-creators .section__header {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 20px
+    }
+
+
 }
 /*  * * Thiet bi rieng Table: @media screen and (min-width: 768px) and (max-width: 991px) * * */
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -22,7 +38,22 @@
         padding: 72px 0;
     }
     .header {
-        padding: 15px 50px;
+        display: flex;
+        padding: 40px 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        align-self: stretch;
+    }
+
+    .section__title {
+    color: var(--White, #FFF);
+    font-family: "Work Sans";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; 
+    text-transform: capitalize;
     }
 }
 /* * * Thiet bi Mobile: @media screen and (max-width: 767px) * * */
@@ -34,4 +65,11 @@
     .header {
         padding: 40px 30px;
     }
+
+    .header .container {
+        flex-direction: column;
+    }
+
+    
 }
+
